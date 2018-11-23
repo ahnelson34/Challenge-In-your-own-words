@@ -1,0 +1,18 @@
+Q.What is scope? Your explanation should include the idea of global vs. local scope.
+A. Scope is more or less are the part of code where a variable can be accessed. Global scope means that a variable declared can be 
+accessed anywhere. Local scope means that variable can only be accessed within that function's block of instructions.  
+
+Q.Why are global variables avoided?
+A. There are scenarios where global variables are ok to use, however for the most part, they carry the risk of unintended side effects.
+When you use global variables, you are leaving yourself open to having that variable interact with another part of code, causing the
+code to be indeterminate. This can lead to hours of bug-fixing making the code determinate. 
+
+Q.Explain JavaScript's strict mode
+A. When you aren't purposefully creating global variables, you should use Strict mode in JavaScript `use strict`. This command, when placed
+on top of your JavaScript file, will prevent you from declaring a variable without the use of let or const. If you do, you will return an
+error until it is changed. This is a nice reminder to help prevent unintended side effects.
+
+Q.What are side effects, and what is a pure function?
+A. Side effects is when you code inadvertantly does something other than intended. This happens when your code changes something outside its
+scope to carry out it's instructions. There can be good and bad side effects. Global variables unintended side effects can lead to a function
+to be indeterminate. When a function is determinate and has no side effects, we considered that code "pure".
